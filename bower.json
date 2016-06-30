@@ -1,10 +1,18 @@
 {
-  "name": "HelloIonic",
+  "name": "TicTacToe-Mobile",
   "private": "true",
   "devDependencies": {
     "ionic": "driftyco/ionic-bower#1.2.4"
   },
   "dependencies": {
-    "angular-route": "^1.5.3"
+    "angular-route": "^1.5.3",
+    "ionic-material": "^0.4.2",
+    "robotodraft": "^1.1.0",
+    "ionic-ratings": "^0.2.0",
+    "bootstrap": "^3.3.6",
+    "jquery": "^3.0.0",
+    "socket.io-client": "sio-client#^1.4.4",
+    "angular-socket-io": "^0.7.0",
+    "angular-guid": "^0.1.2"
   }
 }

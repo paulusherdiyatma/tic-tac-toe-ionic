@@ -1,1 +1,163 @@
 /* Empty. Add your own CSS if you like */
+
+.white-border {
+    border:2px solid white!important;
+    border-radius: 5px;
+}
+.white-text {
+    color: white !important;
+    font-weight: bold;
+}
+
+.logo {
+    font-family: Impact, Charcoal, sans-serif;
+    text-align: center;
+    color: lightgray !important;
+    font-weight: bold;
+    font-size: 70px;
+    margin-bottom: 50px;
+}
+.mini-logo {
+    font-family: Impact, Charcoal, sans-serif;
+    text-align: center;
+    color: black !important;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top:12px;
+    margin-left: 12px;
+}
+.menu-icon {
+    top:5px;
+}
+.home-parent {
+  align-content: center;
+  background-color: cornflowerblue ;
+  height: 94vh;
+  width: 100%;
+}
+.current-location {
+    color: white!important;
+    margin:10px!important;
+}
+.welcome-parent {
+  position: relative;
+  align-content: center;
+  background-color: cornflowerblue ;
+  }
+.welcome-child {
+  margin:25vh 10vw 50vh 10vw;
+  height: 30vh;
+  width: 80vw;
+  color: white;
+  text-align: center;
+  align-content: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+hr { 
+    display: block;
+    margin-top: 0.2em!important;
+    margin-bottom: 0.2em!important;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 2px!important;
+}
+
+.registration-child {
+  margin:15vh 5vw 50vh 5vw;
+  height: 35vh;
+  width: 90vw;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+.registration-parent {
+  position: relative;
+  align-content: center;
+  background-color: cornflowerblue ;
+}
+.menu-content {
+    background-color: blanchedalmond;
+}
+.menu-item {
+  font-size: 18px!important;
+  font-weight: bold;
+}
+.menu-separator {
+    margin-top:0px!important;
+    margin-bottom:0px!important;
+}
+.profile-screen {
+    align-content: center;
+    background-color: black!important;
+    height: 94vh;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+.photo-profile {
+     margin: 0 auto!important;
+     border: 2px solid white;
+     padding:5px;
+     margin-top:30px!important;
+     margin-bottom:30px!important;
+}
+
+.collection-view {
+    width:90vw;
+    height:200px;
+    border:2px solid lightgray;
+    margin:15px 5vw 15px 5vw !important;
+    background-size:     cover;               
+    background-repeat:   no-repeat;
+    background-position: center center; 
+}
+
+.image-collection-view {
+    width:80vw;
+    height:180px;
+    border:1px solid  darkslategray;
+    margin:5px 5vw 10px 5vw !important;
+}
+
+.rating {
+    margin-top:0px;
+}
+
+.main-box {
+    width:304px;
+    height:303px;
+    /*border:2px solid green;*/
+    margin: 0 auto;
+    margin-top:0px!important;
+}
+
+.row-game {
+    width:100%;
+    height:100px
+}
+
+.col-game {
+    width:100px;
+    height:100%;
+    border:2px solid green;
+    float:left; 
+    border-radius:0px;
+    padding: 0px;
+    background-color: none;
+}
+
+.col-game-x {
+    background: url(http://i.imgur.com/JaXq3E7.png) no-repeat center;
+    background-size: 80px;
+    background-color: lightgray!important;
+}
+
+.col-game-o {
+    background: url(http://i.imgur.com/f5kZLEa.png) no-repeat center;
+    background-size: 80px;
+    background-color: lightgray!important;
+}

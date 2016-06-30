@@ -8,6 +8,7 @@
 
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <link href="lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
     <link href="css/ionic.app.css" rel="stylesheet">
@@ -21,29 +22,48 @@
 
     <!--Library script-->
     <script src="lib/angular-route/angular-route.min.js"></script>
+    <script src="lib/ionic-ratings/dist/ionic-ratings.min.js"></script>
+    <script src="lib/jquery/dist/jquery.min.js"></script>
+    <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="lib/socket.io-client/socket.io.js"></script>
+    <script src="lib/angular-socket-io/socket.js"></script>
+    <script src="lib/angular-guid/guid.min.js"></script>
+
+  
     <!-- your app's js -->
     <script src="js/app.module.js"></script>
     <script src="js/app.config.js"></script>
     <script src="js/app.route.js"></script>
 
     <!--Modules js-->
-    <!--Authorization modules-->
-    <script src="modules/authorization/controllers/authorization.controller.js"></script>
-    <script src="modules/authorization/services/authorization.service.js"></script>
 
+    <!--Welcome modules-->
+    <script src="modules/welcome/controllers/welcome.controller.js"></script>
+    <script src="modules/welcome/services/welcome.service.js"></script>
+    
+    <!--Registration modules-->
+    <script src="modules/registration/controllers/registration.controller.js"></script>
+    <script src="modules/registration/services/registration.service.js"></script>
+    
+    <!--Menu modules-->
+    <script src="modules/menu/controllers/menu.controller.js"></script>
+    <script src="modules/menu/services/menu.service.js"></script>
+    
     <!--Home modules-->
     <script src="modules/home/controllers/home.controller.js"></script>
     <script src="modules/home/services/home.service.js"></script>
+    
+    <!--Profile modules-->
+    <script src="modules/profile/controllers/profile.controller.js"></script>
+    <script src="modules/profile/services/profile.service.js"></script>
+
+      <!--Socket io service-->
+    <script src="modules/services/socketService.js"></script>
+    
 </head>
 
 <body ng-app="app">
-    <ion-pane>
-        <ion-header-bar class="bar-stable">
-        </ion-header-bar>
-        <ion-content>
-            <ion-nav-view name="content"></ion-nav-view>
-        </ion-content>
-    </ion-pane>
+    <ion-nav-view name="content"></ion-nav-view>
 </body>
 
 </html>

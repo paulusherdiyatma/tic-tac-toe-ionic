@@ -4,5 +4,5 @@ angular.module('app')
    //TODO:implement code here 
 })
 .constant('RestApi',{
-    'url':'url of REST API'
+    'url':'http://172.19.12.39:3000/api'
 });
