@@ -111,15 +111,56 @@ angular.module('app')
 
         var nsp;
 
-        $scope.checkType = function (type) {
-            if (type == 'cross') {
-                return 'col-game-x';
+        $scope.checkType = function (col) {
+            var style = "";
+            if(col.id == 1 || col.id == 2 || col.id == 3){
+                style = "col-game-first-row";
+                if(col.id == 1){
+                    style = style + " col-game-left";
+                }
+                if(col.id == 3){
+                    style = style + " col-game-right";
+                }
             }
-            else if (type == 'circle') {
-                return 'col-game-o';
+
+            if(col.id == 4 || col.id == 5 || col.id == 6){
+                if(col.id == 4){
+                    style = style + " col-game-left";
+                }
+                if(col.id == 6){
+                    style = style + " col-game-right";
+                }
+            }
+
+            if(col.id == 7 || col.id == 8 || col.id == 9){
+                style = "col-game-third-row";
+                if(col.id == 7){
+                    style = style + " col-game-left";
+                }
+                if(col.id == 9){
+                    style = style + " col-game-right";
+                }
+            }
+//             .col-game-first-row {
+//     border-top:0px inset white;
+// }
+
+// .col-game-second-row {
+
+// }
+
+// .col-game-third-row
+
+
+
+            if (col.type == 'cross') {
+                return style+' col-game-x';
+            }
+            else if (col.type == 'circle') {
+                return style+' col-game-o';
             }
             else {
-                return '';
+                return style+'';
             }
 
         }

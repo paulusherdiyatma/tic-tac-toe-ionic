@@ -1,36 +1,82 @@
-<ion-view view-title="Tic Tac Toe">
-    <ion-content has-bouncing="false" style="background-color: cornflowerblue ">
+<ion-view view-title={{player.username}}>
+    <ion-content has-bouncing="false" class="content-background">
         <div style="text-align: center;">
-            <div style="margin: 0 auto;width:300px;height:140px;margin-top:10px;border:2px solid white;border-radius:10px">
-              <h6 class="white-text">Game Statistic</h6>
-              <hr>
-                  <h6 class="white-text">Play : {{player.play}}
-                  <h6 class="white-text">Win : {{player.win}}</h6>
-                  <h6 class="white-text">Draw : {{player.draw}}</h6>
-                  <h6 class="white-text">Defeat : {{player.defeat}}</h6>
-            </div>
-            
-            <div style="margin: 0 auto;width:210px;height:50px;margin-top:20px" ng-show="gamePlayed">
-                <div style="width:70px;height:100%;float:left; border-radius:0px"><b>{{player1}}</b><br><img width="15" height="15" src="http://i.imgur.com/f5kZLEa.png"></div>
-                <div style="width:70px;height:100%;float:left; border-radius:0px;margin-top:10px">VS</div>
-                <div style="width:70px;height:100%;float:left; border-radius:0px"><b>{{player2}}</b><br><img width="15" height="15" src="http://i.imgur.com/JaXq3E7.png"></div>
-            </div>
-            <br>
-
-            
-            <!--main box-->
-            <div class="main-box" ng-show="gamePlayed">
-                <!--first row-->
-                <div class="row-game" ng-repeat="data in gameData">
-                    <div style="width:100%;height:100%">
-                    <!--first col-->
-                    <div class="col-game button" ng-repeat="colData in data" ng-model="colData" ng-click="chooseThis(colData)"  ng-class="checkType(colData.type)"></div>
+            <!--<div style="margin: 0 auto;width:300px;height:110px;margin-top:10px;border:2px solid white;border-radius:10px">-->
+            <!--<h6 class="white-text">Game Statistic</h6>-->
+            <!--<hr>-->
+            <div class="row" style="margin:15px 0 0 0;padding:8px">
+                <div class="col-md-12 col-sm-12 col-xs-12 statistic-content" style="border-radius:10px;padding:0;border:3vw outset #a16600;">
+                    
+                    <div class="row" style="margin:0;padding:0">
+                         <div class="col-md-2 col-sm-2 col-xs-2">
+                             <button class="button button-energized profile-button"></button>
+                       </div>
+                        <div class="col-md-3 col-sm-3 col-xs-3" style="margin:-5px">
+                            <h5 class="white-text"><b>Win</b></h5>
+                            <h5 style="color:lightgreen"><b>100</b></h5>
+                        </div>
+                        <div class="col-md-3 col-sm-3 col-xs-3" style="margin:-5px">
+                            <h5 class="white-text"><b>Draw</b></h5>
+                            <h5 style="color:yellow"><b>100</b></h5>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-4" style="margin:-5px">
+                            <h5 class="white-text"><b>Defeat</b></h5>
+                            <h5 style="color:darkred"><b>100</b></h5>
+                        </div>
+                        
                     </div>
                 </div>
+
             </div>
-            <button ng-show="!gamePlayed" class="button button-balanced" style="margin:10px" ng-click="play()">Play</button>
-            <button ng-show="gamePlayed && !isTheGameEnd" class="button button-assertive" style="margin:10px" ng-click="endGame()">End Game</button>
-            <button ng-show="isTheGameEnd" class="button button-balanced" style="margin:10px" ng-click="play()">Play Again</button>
+            <!--<h6 style="margin-top:0px;margin-bottom:3px" class="white-text">Play : {{player.play}}
+                  <h6 style="margin-top:0px;margin-bottom:3px" class="white-text">Win : {{player.win}}</h6>
+                  <h6 style="margin-top:0px;margin-bottom:3px" class="white-text">Draw : {{player.draw}}</h6>
+                  <h6 style="margin-top:0px;margin-bottom:3px" class="white-text">Defeat : {{player.defeat}}</h6>-->
         </div>
+
+        <div class="row" style="margin:-5px 0 0 0;padding:8px;text-align: center;">
+            <div class="col-md-6 col-sm-6 col-xs-6 new-button-content" style="border-radius:10px;padding:10px 0px;border:3vw outset saddlebrown;">
+
+                <button ng-show="!gamePlayed" class="button play-custom-button" ng-click="play()">Play</button>
+                <!--<button ng-show="gamePlayed && !isTheGameEnd" class="button button-assertive" style="margin:0px" ng-click="endGame()">End Game</button>-->
+                <!--<button ng-show="isTheGameEnd" class="button custom-button" style="margin:0px" ng-click="play()">Play Again</button>-->
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-6 end-button-content" style="border-radius:10px;padding:10px 0px;border:3vw outset saddlebrown;">
+                <!--<button ng-show="!gamePlayed" class="button  custom-button" ng-click="play()">Play</button>-->
+                <button ng-disabled="gamePlayed && !isTheGameEnd" class="button end-custom-button" ng-click="endGame()">End Game</button>
+                <!--<button ng-show="isTheGameEnd" class="button custom-button" style="margin:0px" ng-click="play()">Play Again</button>-->
+            </div>
+        </div>
+
+        <div class="main-box statistic-content" ng-show="!gamePlayed">
+
+        </div>
+
+        <!--main box-->
+        <div class="main-box statistic-content" ng-show="gamePlayed">
+
+            <!--first row-->
+            <div class="row-game" ng-repeat="data in gameData">
+                <div style="width:100%;height:100%">
+                    <!--first col-->
+                    <div class="col-game button" ng-repeat="colData in data" ng-model="colData" ng-click="chooseThis(colData)" ng-class="checkType(colData)"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style="margin:0 0 0 0;padding:8px;text-align: center;">
+            <div class="col-md-12 col-sm-12 col-xs-12 statistic-content" style="border-radius:10px;padding:10px;border:3vw outset #a16600;">
+                <div class="col-md-4 col-sm-4 col-xs-4"><b>{{player1}}</b><br><img width="15" height="15" src="http://i.imgur.com/f5kZLEa.png"></div>
+                <div class="col-md-4 col-sm-4 col-xs-4 white-text" style="margin-top:10px">VS</div>
+                <div class="col-md-4 col-sm-4 col-xs-4"><b>{{player2}}</b><br><img width="15" height="15" src="http://i.imgur.com/JaXq3E7.png"></div>
+            </div>
+        </div>
+
+
+
+
+
+
+
     </ion-content>
 </ion-view>

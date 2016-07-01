@@ -128,36 +128,120 @@ hr {
 }
 
 .main-box {
-    width:304px;
-    height:303px;
-    /*border:2px solid green;*/
+    width:96vw;
+    height:96vw;
+    border-radius: 10px;
+    /*padding:1vw;*/
+    background-color: red;
+    border:3vw outset #a16600;
     margin: 0 auto;
-    margin-top:0px!important;
+    margin-top:-10px!important;
 }
+
 
 .row-game {
     width:100%;
-    height:100px
+    height:calc(90vw/3);
+}
+
+.row-game-no-border {
+    width:100%;
+    height:calc(88vw/3);
 }
 
 .col-game {
-    width:100px;
+    width:calc(90vw/3);
     height:100%;
-    border:2px solid green;
     float:left; 
     border-radius:0px;
+    border:4px groove white;
     padding: 0px;
-    background-color: none;
+    background-color: transparent;
+}
+.col-game-first-row {
+    border-top:0px dashed white;
+}
+
+.col-game-third-row {
+border-bottom:0px dashed white;
+}
+
+.col-game-left {
+    border-left:0px dashed white;
+}
+
+.col-game-right {
+border-right:0px dashed white;
 }
 
 .col-game-x {
     background: url(http://i.imgur.com/JaXq3E7.png) no-repeat center;
-    background-size: 80px;
-    background-color: lightgray!important;
+    background-size: 50px;
+    background-color: transparent!important;
 }
 
 .col-game-o {
     background: url(http://i.imgur.com/f5kZLEa.png) no-repeat center;
-    background-size: 80px;
-    background-color: lightgray!important;
+    background-size: 50px;
+    background-color: transparent!important;
 }
+
+.content-background{
+    background: url(../img/brick.jpg) no-repeat center;
+    background-size: 100vw 100vh;
+    background-color: transparent!important;
+}
+
+.statistic-content{
+    background-color: #a16600;
+background-image: url("http://www.transparenttextures.com/patterns/wood-pattern.png");
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+
+.new-button-content{
+    background-color: green;
+    
+/*background-image: url("http://www.transparenttextures.com/patterns/wood-pattern.png");*/
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+
+.end-button-content{
+    background-color: orangered;
+    
+/*background-image: url("http://www.transparenttextures.com/patterns/wood-pattern.png");*/
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+
+.play-custom-button {
+    margin:-10px -10px -10px -10px;
+    border-color: transparent;
+    background-color: #33cd5f;
+    color: #fff;
+    line-height: 20px !important;
+    min-height:40px!important;
+    width: 100%;
+    font-weight: bold;
+}
+
+.end-custom-button {
+    margin:-10px -10px -10px -10px;
+    border-color: transparent;
+    background-color: orangered;
+    color: #fff;
+    line-height: 20px !important;
+    min-height:40px!important;
+    width: 100%;
+    font-weight: bold;
+}
+
+ .profile-button{
+    background:url(https://cdn3.iconfinder.com/data/icons/profile-picture-avatar/512/profile_picture_lover_boy_avatar-512.png) no-repeat;
+    cursor:pointer;
+    background-size: 100% 100%;
+    border:none;
+    width:40px;
+    height:100%;
+}
+
+
+ 

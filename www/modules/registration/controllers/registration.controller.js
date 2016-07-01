@@ -22,13 +22,15 @@ angular.module('app')
                 }
                 else {
                     window.localStorage.setItem('profile', JSON.stringify(result.player));
-
                     SocketService.disconnect();
-SocketService.initSocket();
+                    
                     $ionicPopup.alert({
                         title: 'Message',
                         content: result.message
                     }).then(function (res) {
+                        $rootScope.player = result.player;
+                         window.localStorage.setItem('profile', JSON.stringify(result.player));
+                         SocketService.initSocket();
                         $state.go('menu.home');
                     });
 

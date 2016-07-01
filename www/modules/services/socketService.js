@@ -26,7 +26,7 @@ angular.module('app')
             profile = {};
             profile.id = null;
         }
-        ioSocket = io.connect('https://projectdeployment.com/tic-tac-toe', { query: 'id=' + profile.id })
+        ioSocket = io.connect('http://172.19.12.39:3000', { query: 'id=' + profile.id })
         socketFactory = socketFactory({ ioSocket: ioSocket })
 
         socketFactory.disconnect = function () {
@@ -40,7 +40,7 @@ angular.module('app')
                 profile = {};
                 profile.id = null;
             }
-            return io.connect('https://projectdeployment.com/tic-tac-toe', { query: 'id=' + profile.id })
+            return io.connect('http://172.19.12.39:3000', { query: 'id=' + profile.id })
 
         };
 

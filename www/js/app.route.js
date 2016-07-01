@@ -30,10 +30,20 @@ angular.module('app')
                     }
                 }
             })
-            .state('menu.home', {
+            // .state('menu.home', {
+            //     url: '/home',
+            //     views: {
+            //         'menu-content': {
+            //             templateUrl: 'modules/home/views/home.html',
+            //             controller: 'HomeController'
+            //         }
+            //     }
+            // })
+
+             .state('home', {
                 url: '/home',
                 views: {
-                    'menu-content': {
+                    'content': {
                         templateUrl: 'modules/home/views/home.html',
                         controller: 'HomeController'
                     }
@@ -58,7 +68,7 @@ angular.module('app')
             $state.go("registration");
             }
             else {
-               $state.go("menu.home"); 
+               $state.go("home"); 
             }
         });
     });
